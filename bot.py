@@ -3,12 +3,13 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import requests
 from datetime import datetime
 
+import os
+
 # توکن بات
-BOT_TOKEN = "8694609241:AAGRAd6F5P0SYFKZBgYKRvQWpCz-pHh_gBg"
+BOT_TOKEN = os.getenv("8938745917:AAGRWrFPE23sGmh1URN1rqb-F7056d7fLW4")
 
 # کلید آب‌وهوا
-WEATHER_API_KEY = "c990b65cc31c1b175e609f9f9484cae9"
-
+WEATHER_API_KEY = os.getenv("c990b65cc31c1b175e609f9f9484cae9")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = (
